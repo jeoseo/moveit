@@ -75,6 +75,8 @@ std::string JointModel::getTypeName() const
       return "Planar";
     case FLOATING:
       return "Floating";
+    case CONTINUUM:
+      return "Continuum";
     case FIXED:
       return "Fixed";
     default:

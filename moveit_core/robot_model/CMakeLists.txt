@@ -4,6 +4,7 @@ add_library(${MOVEIT_LIB_NAME}
   src/aabb.cpp
   src/fixed_joint_model.cpp
   src/floating_joint_model.cpp
+  src/continuum_joint_model.cpp
   src/joint_model.cpp
   src/joint_model_group.cpp
   src/link_model.cpp

@@ -115,6 +115,7 @@ public:
     PRISMATIC,
     PLANAR,
     FLOATING,
+    CONTINUUM,
     FIXED
   };
 

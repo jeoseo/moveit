@@ -904,6 +904,12 @@ JointModel* RobotModel::constructJointModel(const urdf::Joint* urdf_joint, const
       case urdf::Joint::FIXED:
         new_joint_model = new FixedJointModel(urdf_joint->name);
         break;
+        case urdf::Joint::CONTINUUM: {
+            ContinuumJointModel *j = new ContinuumJointModel(urdf_joint->name);
+            j->setVariableBounds(j->getName(), jointBoundsFromURDF(urdf_joint));
+            new_joint_model = j;
+        }
+            break;
       default:
         ROS_ERROR_NAMED(LOGNAME, "Unknown joint type: %d", (int)urdf_joint->type);
         break;

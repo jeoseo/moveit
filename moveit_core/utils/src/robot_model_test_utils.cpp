@@ -166,6 +166,8 @@ void RobotModelBuilder::addChain(const std::string& section, const std::string& 
       joint->type = urdf::Joint::PLANAR;
     else if (type == "floating")
       joint->type = urdf::Joint::FLOATING;
+    else if (type == "continuum")
+        joint->type = urdf::Joint::CONTINUUM;
     else if (type == "revolute")
       joint->type = urdf::Joint::REVOLUTE;
     else if (type == "continuous")

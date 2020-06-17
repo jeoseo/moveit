@@ -815,7 +815,7 @@ RobotState::getMinDistanceToPositionBounds(const std::vector<const JointModel*>&
   const JointModel* index = nullptr;
   for (const JointModel* joint : joints)
   {
-    if (joint->getType() == JointModel::PLANAR || joint->getType() == JointModel::FLOATING)
+    if (joint->getType() == JointModel::PLANAR || joint->getType() == JointModel::FLOATING ||joint->getType() == JointModel::CONTINUUM)
       continue;
     if (joint->getType() == JointModel::REVOLUTE)
       if (static_cast<const RevoluteJointModel*>(joint)->isContinuous())
