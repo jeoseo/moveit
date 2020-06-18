@@ -1308,7 +1308,7 @@ bool RobotState::getJacobian(const JointModelGroup* group, const LinkModel* link
         jacobian.block<3, 1>(3, joint_index + 2) = jacobian.block<3, 1>(3, joint_index + 2) + joint_axis;
       }
       else
-        ROS_ERROR_NAMED(LOGNAME, "Unknown type of joint in Jacobian computation");
+        ROS_ERROR_ONCE_NAMED(LOGNAME, "Unknown type of joint in Jacobian computation; this will happen for every continuum joint");
     }
     if (pjm == root_joint_model)
       break;
