@@ -52,7 +52,7 @@ find_library(LIBFCL_LIBRARIES fcl HINTS ${LIBFCL_PC_LIBRARY_DIRS})
 
 
 find_package(octomap REQUIRED)
-find_package(urdfdom_headers 1.0.5 REQUIRED PATHS "/home/jeoseo/ros_ws1" )
+find_package(urdfdom_headers 1.0.5 REQUIRED)
 
 find_package(catkin REQUIRED
 COMPONENTS
